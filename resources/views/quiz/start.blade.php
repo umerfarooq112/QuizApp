@@ -49,7 +49,6 @@
 </div>
 
 <script>
-<<<<<<< HEAD
     var countDownDate = 10;
     var x = setInterval(function() {
         document.getElementById("demo").innerHTML =   countDownDate + "s " ;
@@ -60,29 +59,6 @@
         document.getElementById('quizform').submit();
         }
     }, 1000);
-=======
-  // Set the date we're counting down to
-  // var countDownDate = new Date("Apr 26, 2021 18:50:00").getTime();
-
-
-
-  var countDownDate = 10;
-  console.log(`{{ $id }}`)
-
-  var x = setInterval(function() {
-   
-    document.getElementById("demo").innerHTML =   countDownDate + "s " ;
-    countDownDate--
-      
-    // If the count down is over, write some text 
-    if (countDownDate < -1) {
-      document.getElementById("demo").innerHTML = "0s";
-      document.getElementById('quizform').submit();
-    }
-  }, 1000);
->>>>>>> c176673fdaaf993356aec0726a924a0ab3a0ed4c
   </script>
-
-
 @endsection
         
