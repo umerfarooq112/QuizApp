@@ -70,7 +70,7 @@
     // If the count down is over, write some text 
     if (countDownDate < -1) {
       document.getElementById("demo").innerHTML = "0s";
-      // document.getElementById('quizform').submit();
+      document.getElementById('quizform').submit();
     }
   }, 1000);
   </script>
