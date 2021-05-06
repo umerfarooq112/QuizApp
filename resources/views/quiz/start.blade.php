@@ -20,20 +20,17 @@
               </label>
               <div class="mb-6">
                   <div>
-
                       <label class="">
                           <input type="radio" class="form-radio" name="option" value="option1" checked >
                           <span class="ml-2">{{$quiz->option1}}</span>
                         </label>
                     </div>
                     <div class="mt-2">
-
                         <label class=" ">
                             <input type="radio" class="form-radio" name="option" value="option2">
                             <span class="ml-2">{{$quiz->option2}}</span>
                         </label>
-                    </div>
-                    
+                    </div>               
                     <input type="hidden" name="id" value="{{ $id }}">
                     <input type="hidden" name="CorrectAnswers" value="{{ $CorrectAnswers }}">
               </div>
@@ -41,38 +38,27 @@
                 <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
                   Next
                 </button>
-
                 <div class="">
                   <span class="text-md font-light">Time Remaning: </span>
                   <span id="demo" class="rounded shadow-lg font-bold bg-red-400 text-white text-md p-4 ">10s</span>
                 </div>
               </div>
-            </form>
-           
+            </form>      
           </div>
     </div>    
 </div>
 
 <script>
-  // Set the date we're counting down to
-  // var countDownDate = new Date("Apr 26, 2021 18:50:00").getTime();
-
-
-
-  var countDownDate = 10;
-  console.log(`{{ $id }}`)
-
-  var x = setInterval(function() {
-   
-    document.getElementById("demo").innerHTML =   countDownDate + "s " ;
-    countDownDate--
-      
-    // If the count down is over, write some text 
-    if (countDownDate < -1) {
-      document.getElementById("demo").innerHTML = "0s";
-      // document.getElementById('quizform').submit();
-    }
-  }, 1000);
+    var countDownDate = 10;
+    var x = setInterval(function() {
+        document.getElementById("demo").innerHTML =   countDownDate + "s " ;
+        countDownDate-- 
+        // If the count down is over, write some text 
+        if (countDownDate < -1) {
+        document.getElementById("demo").innerHTML = "0s";
+        document.getElementById('quizform').submit();
+        }
+    }, 1000);
   </script>
 
 
